@@ -1,0 +1,71 @@
+---
+interface Props {
+  topLine?: string;
+  bottomLine?: string;
+  label?: string;
+}
+
+const {
+  topLine = "HUNT THE",
+  bottomLine = "UNIVERSE!!",
+  label = `${topLine} ${bottomLine}`,
+} = Astro.props;
+---
+
+<svg
+  class="hunt-title"
+  viewBox="0 0 620 285"
+  role="img"
+  aria-label={label}
+  preserveAspectRatio="xMidYMid meet"
+>
+  <defs>
+    <linearGradient id="burst-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffca3"></stop>
+      <stop offset="1" stop-color="#fff568"></stop>
+    </linearGradient>
+    <filter id="title-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="3" dy="4" stdDeviation="0" flood-color="#172144"></feDropShadow>
+    </filter>
+  </defs>
+
+  <path
+    class="title-burst"
+    d="M34 54 L71 55 L64 25 L105 29 L130 10 L154 35 L198 4 L228 30 L282 2 L310 25 L338 7 L364 31 L400 4 L426 30 L464 8 L478 38 L520 21 L532 54 L585 65 L548 99 L591 130 L548 155 L584 187 L537 199 L548 238 L505 232 L486 271 L451 245 L415 278 L381 248 L338 279 L307 250 L270 279 L238 246 L196 273 L169 239 L124 267 L107 228 L60 245 L68 207 L22 190 L51 157 L14 128 L51 99 Z"
+    fill="url(#burst-fill)"
+    stroke="#172144"
+    stroke-width="2"
+    stroke-linejoin="round"
+    filter="url(#title-shadow)"
+  ></path>
+  <text class="title-copy title-copy--top" x="310" y="116" text-anchor="middle">
+    {topLine}
+  </text>
+  <text class="title-copy title-copy--bottom" x="310" y="207" text-anchor="middle">
+    {bottomLine}
+  </text>
+</svg>
+
+<style>
+  .hunt-title {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .title-copy {
+    fill: var(--color-pink);
+    font-family: var(--font-hand);
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    paint-order: stroke fill;
+    stroke: rgb(255 255 255 / 35%);
+    stroke-width: 1.25px;
+  }
+
+  .title-copy--bottom {
+    font-size: 69px;
+  }
+</style>

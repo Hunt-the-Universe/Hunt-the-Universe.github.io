@@ -1,0 +1,100 @@
+---
+export type NavButtonTone = "pink" | "blue" | "yellow" | "mint" | "peach";
+
+interface Props {
+  href?: string;
+  tone?: NavButtonTone;
+  current?: boolean;
+  type?: "button" | "submit" | "reset";
+}
+
+const { href, tone = "pink", current = false, type = "button" } = Astro.props;
+
+const className = `nav-button nav-button--${tone}`;
+---
+
+{
+  href ? (
+    <a class={className} href={href} aria-current={current ? "page" : undefined}>
+      <slot />
+    </a>
+  ) : (
+    <button class={className} type={type}>
+      <slot />
+    </button>
+  )
+}
+
+<style>
+  .nav-button {
+    --button-fill: var(--color-pink-soft);
+    --button-ink: var(--color-blue);
+
+    display: grid;
+    min-height: 4.5rem;
+    place-items: center;
+    padding: 0.75rem 1.35rem;
+    border: 3px solid var(--color-ink);
+    border-radius: 0.85rem;
+    background: var(--button-fill);
+    box-shadow: 3px 4px 0 var(--color-ink);
+    color: var(--button-ink);
+    font-family: var(--font-hand);
+    font-size: clamp(1rem, 1.8vw, 1.35rem);
+    font-weight: 800;
+    line-height: 1.05;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+      translate 150ms ease,
+      box-shadow 150ms ease,
+      filter 150ms ease;
+  }
+
+  .nav-button:hover {
+    filter: saturate(1.12) brightness(1.02);
+    translate: 1px 1px;
+    box-shadow: 2px 3px 0 var(--color-ink);
+  }
+
+  .nav-button:active {
+    translate: 3px 4px;
+    box-shadow: 0 0 0 var(--color-ink);
+  }
+
+  .nav-button:focus-visible {
+    outline: 4px solid white;
+    outline-offset: 4px;
+  }
+
+  .nav-button--blue {
+    --button-fill: var(--color-blue-soft);
+  }
+
+  .nav-button--yellow {
+    --button-fill: var(--color-yellow);
+  }
+
+  .nav-button--mint {
+    --button-fill: var(--color-mint);
+  }
+
+  .nav-button--peach {
+    --button-fill: var(--color-peach);
+  }
+
+  .nav-button[aria-current="page"] {
+    box-shadow:
+      3px 4px 0 var(--color-ink),
+      inset 0 -0.45rem 0 rgb(255 255 255 / 28%);
+  }
+
+  @media (max-width: 44rem) {
+    .nav-button {
+      min-height: 3.8rem;
+      padding-inline: 1rem;
+      font-size: 1rem;
+    }
+  }
+</style>

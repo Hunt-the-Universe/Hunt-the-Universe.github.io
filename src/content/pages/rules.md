@@ -1,0 +1,68 @@
+---
+title: Details + Rules
+description: Everything your team needs to know before, during, and after Hunt the Universe.
+---
+
+## Hunting the Universe Step by Step
+
+### Registration
+
+1. Assemble a team! Your team will need to have 5 to 10 willing members. This is a scientific number we have arrived at from years of scavenger hunt work. Trust us!
+   - Elect a Team Captain (up to you how you choose: trial by nerf combat, pad thai eating contest, nose goes…)
+   - Assemble all team members’ full names and email addresses.
+2. The Team Captain will register all members of the team at once at our REGISTRATION LINK.
+3. All members will need to agree to follow Details and Rules and sign a liability release that will be emailed to them before they can participate (this will also be available day-of at Hunt HQ if you’re a late addition).
+
+### Before the Hunt
+
+4. Make sure you read the TIPS page before you come so you can arrive prepared with all the things you need!
+
+### The Hunt Begins
+
+5. Check-in starting at 8:00am at Hunt The Universe HQ at the Doric Lodge (619 N 36th St.). We’ll have coffee, a name-tag making station, releases for anyone who hasn’t signed, and some space to hang out. If your team is suddenly short on people, this is also a good opportunity to find another team to combine with!
+6. Just before 9:00am we’ll say a few words and then release the clues in-person and on this website on the hour!
+7. You will have between 9am and 9pm to complete clues and submit your answers! You don’t need to start right at 9am or hunt all the way until 9pm if you don’t want to (We get it, you have lots to do, we know. Also see the fun rule below), but we guarantee you won’t run out of clues to complete before the end. You can do the clues in any order.
+8. Hunt Masters will (mostly) be at Hunt HQ (Doric Lodge) until 3pm, and then at Fremont Social from 4pm onwards. The Doric Lodge will be open as a work space until the end of Hunt the Universe, but if you leave anything there it will need to be picked up by 10pm.
+
+### Before the End of the Hunt
+
+9. **SUBMIT BEFORE 9PM!**
+   - Team Powerpoint! You must compile all answered clues into a team Google Slideshow or Powerpoint to share with us before the deadline of Ocotber 10th at 9:00pm AND email your submission Slideshows as pdfs to [HuntTheUniverse@gmail.com](mailto:HuntTheUniverse@gmail.com).
+     - First Slide: Your team name and the names of your team members.
+     - Remaining Slides: Slides 2+: Write the clue number at the top of the slide. Put your answer on the slide: text, a hyperlink to a youtube or google drive video (make sure it’s public/viewable to us!!), an embedded photo, etc. (if you choose to embed video, please include a link for the pdf version), paste any photo documentation for photo questions…you get the idea. Again, make sure all of your submitted materials are shared and viewable for the Hunt Masters at [HuntTheUniverse@gmail.com](mailto:HuntTheUniverse@gmail.com). You don’t want to do all that work and not get your precious points!
+   - For physical materials
+     - Any physical clues that need to be turned in should be submitted to the Hunt Masters or volunteers at Hunt the Universe HQ (The Doric Lodge) by 9pm.
+
+### Just After the Hunt
+
+10. Hunt the Universe will end the day at 9pm with a mixer at Fremont Social. You’re welcome to hang out and compare stories with other participants for as long as you’d like!
+
+### The Gala and Awards Ceremony
+
+11. Join us for a Hunt the Universe Gala and Awards Ceremony for viewing of the best submissions and particularly entertaining entries and the awarding of some hella good prizes! Date/time and location TBA, but we’re aiming for the evening of Wednesday, October 21st.
+
+## Details and Rules
+
+We’ll keep this short. If you break these rules, we’ll deduct points or disqualify you.
+
+1. **Be Safe**
+
+   Safety first!! We mean it. If how you were planning to complete a clue is in any way unsafe, find a different way to complete it. We won’t deduct any points if you modify the clues to be safer (while hopefully keeping the spirit of the clue), but we will absolutely deduct points if you are being unsafe, especially if you endanger others.
+
+2. **Don't Break the Law**
+
+   Seriously. None of these clues ask you to break the law. If you think a clue is asking you to break the law, it isn’t: find another way to do it. We’re not going to bail you out of jail for attempting to jump the Fremont Bridge while it’s opening.
+
+3. **Don't be a Jerk**
+
+   Lots of people are just trying to go about their day in Fremont and want no part in these shenanigans. We can’t help if somebody is offended by your professions of love to a snail crossing the sidewalk, but please leave room for them to pass. Similarly, consent is important. Please do not force anyone to be a part of your answers unless they want to be. Please do not be disrespectful or unnecessarily crude. Don’t sabotage other teams. If you are a jerk you will make us sad, you’ll make your dog sad, you’ll make Mayor Katie Wilson sad, and you’ll make Mr. Roger’s ghost sad. We don’t want to be haunted by a sad Mr. Roger’s.
+
+4. **All Judging is Final**
+
+   The Hunt Masters will judge your answers after the event ends and award points up to the maximum listed on the clue. Some clues are worth a point, some are worth many. The team with the most points will win. Some clues will have special prizes in addition to points for the team that submits the best answer for that clue. We will judge entirely based on our whims and secret subjective criteria, ultimately mirroring the chaos and absurdity of the universe itself.
+
+5. **Have Fun**
+
+   This is an important rule. This whole day is for fun. If it’s not a good time, don’t do it. Start later or stop early, skip clues, take a break. Don’t forget to eat and drink water. We love naps: come take a nap with us at Hunt the Universe HQ? So fun: required.
+
+Questions? Clarifications? Email us at [HuntTheUniverse@gmail.com](mailto:HuntTheUniverse@gmail.com). Close to the event we’ll also provide a number you can text during the day.

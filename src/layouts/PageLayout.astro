@@ -1,0 +1,107 @@
+---
+import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content={description} />
+        <title>{title} | Hunt the Universe</title>
+    </head>
+    <body>
+        <main class="page-layout">
+            <header class="site-header">
+                <a
+                    class="wordmark"
+                    href="/"
+                    aria-label="Hunt the Universe home"
+                >
+                    <span>Hunt the</span>
+                    <strong>Universe!</strong>
+                </a>
+                <Navbar />
+            </header>
+
+            <slot />
+        </main>
+    </body>
+</html>
+
+<style>
+    .page-layout {
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+        padding: clamp(1rem, 3vw, 2.25rem) clamp(0.8rem, 3vw, 2.25rem) 12rem;
+        background:
+            radial-gradient(
+                circle at 12% 16%,
+                rgb(253 252 118 / 54%) 0 3px,
+                transparent 4px
+            ),
+            radial-gradient(
+                circle at 86% 26%,
+                rgb(255 255 255 / 42%) 0 2px,
+                transparent 3px
+            ),
+            linear-gradient(
+                145deg,
+                #00ed8f 0%,
+                var(--color-green) 56%,
+                #00e68c 100%
+            );
+        background-size:
+            47px 47px,
+            61px 61px,
+            auto;
+    }
+
+    .site-header {
+        position: relative;
+        z-index: 3;
+        width: min(100%, 92rem);
+        margin-inline: auto;
+    }
+
+    .wordmark {
+        display: flex;
+        width: fit-content;
+        align-items: baseline;
+        gap: 0.45rem;
+        margin: 0 0 1rem 0.5rem;
+        color: var(--color-blue);
+        font-family: var(--font-hand);
+        font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+        font-weight: 900;
+        line-height: 1;
+        text-decoration: none;
+        text-transform: uppercase;
+        transform: rotate(-1deg);
+    }
+
+    .wordmark strong {
+        color: var(--color-pink);
+        font-size: 1.35em;
+    }
+
+    .wordmark:focus-visible {
+        outline: 4px solid white;
+        outline-offset: 5px;
+    }
+
+    @media (max-width: 48rem) {
+        .wordmark {
+            margin-left: 0.35rem;
+        }
+    }
+</style>

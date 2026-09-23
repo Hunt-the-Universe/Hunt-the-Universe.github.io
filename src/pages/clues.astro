@@ -1,0 +1,20 @@
+---
+import { getEntry, render } from "astro:content";
+import GuidePage from "../layouts/GuidePage.astro";
+
+const clues = await getEntry("pages", "clues");
+
+if (!clues) {
+  throw new Error("The clues content entry could not be found.");
+}
+
+const { Content } = await render(clues);
+---
+
+<GuidePage
+    title={clues.data.title}
+    description={clues.data.description}
+    variant="announcement"
+>
+    <Content />
+</GuidePage>

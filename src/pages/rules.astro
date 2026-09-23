@@ -1,0 +1,16 @@
+---
+import { getEntry, render } from "astro:content";
+import GuidePage from "../layouts/GuidePage.astro";
+
+const rules = await getEntry("pages", "rules");
+
+if (!rules) {
+  throw new Error("The rules content entry could not be found.");
+}
+
+const { Content } = await render(rules);
+---
+
+<GuidePage title={rules.data.title} description={rules.data.description}>
+    <Content />
+</GuidePage>

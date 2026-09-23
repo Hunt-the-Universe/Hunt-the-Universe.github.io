@@ -1,0 +1,63 @@
+---
+interface Props {
+  eyebrow?: string;
+  title?: string;
+}
+
+const {
+  eyebrow = "a competitive all-day",
+  title = "Fremont-wide scavenger hunt",
+} = Astro.props;
+---
+
+<section class="scavenger-oval" aria-label={`${eyebrow} ${title}`}>
+  <p>{eyebrow}</p>
+  <h2>{title}</h2>
+</section>
+
+<style>
+  .scavenger-oval {
+    display: grid;
+    width: min(100%, 34rem);
+    aspect-ratio: 2.6 / 1;
+    align-content: center;
+    justify-items: center;
+    gap: 0.25rem;
+    padding: 0.9rem 2.25rem;
+    border: 2.5px solid var(--color-ink);
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 45% 40%, rgb(255 255 255 / 72%), transparent 24%),
+      linear-gradient(160deg, #ffffaa, var(--color-yellow));
+    box-shadow: 4px 5px 0 rgb(23 33 68 / 16%);
+    color: var(--color-violet);
+    text-align: center;
+    rotate: -1deg;
+  }
+
+  p,
+  h2 {
+    margin: 0;
+    font-family: var(--font-hand);
+    text-wrap: balance;
+  }
+
+  p {
+    font-size: clamp(1rem, 2.2vw, 1.7rem);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  h2 {
+    max-width: 16ch;
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    font-weight: 900;
+    line-height: 1.02;
+  }
+
+  @media (max-width: 35rem) {
+    .scavenger-oval {
+      padding-inline: 1.5rem;
+    }
+  }
+</style>

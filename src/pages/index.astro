@@ -1,0 +1,616 @@
+---
+import ChatBubble from "../components/ChatBubble.astro";
+import HuntTitle from "../components/HuntTitle.astro";
+import NavButton from "../components/NavButton.astro";
+import Navbar from "../components/Navbar.astro";
+import ScavengerOval from "../components/ScavengerOval.astro";
+import TextCard from "../components/TextCard.astro";
+import bridgeLeft from "../images/bridge-left.png";
+import bridgeRight from "../images/bridge-right.png";
+import magnifyingGlass from "../images/magnifying-glass.png";
+import rocket from "../images/rocket.png";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta
+            name="description"
+            content="Hunt the Universe — a Fremont-wide scavenger hunt."
+        />
+        <title>Hunt the Universe</title>
+    </head>
+    <body>
+        <main>
+            <section class="hero" id="home" aria-label="Hunt the Universe">
+                <div class="hero-art">
+                    <svg
+                        class="rocket-path"
+                        viewBox="0 0 1460 320"
+                        aria-hidden="true"
+                    >
+                        <path
+                            class="rocket-path--desktop"
+                            d="M -120 250 C 120 315 315 275 440 165 C 535 80 525 -45 665 45 C 800 132 820 315 1010 272 C 1190 232 1310 115 1460 65"
+                        />
+                        <path
+                            class="rocket-path--tablet"
+                            d="M -90 225 C 115 285 245 245 350 125 C 455 5 540 80 610 185 C 700 320 845 245 980 115 C 1050 48 1120 35 1180 55"
+                        />
+                    </svg>
+
+                    <div class="title-wrap">
+                        <HuntTitle />
+                    </div>
+
+                    <div class="rocket-wrap">
+                        <img
+                            class="rocket"
+                            src={rocket.src}
+                            alt="A hand-drawn rocket carrying Fremont characters"
+                            width={rocket.width}
+                            height={rocket.height}
+                            loading="eager"
+                            decoding="async"
+                        />
+                    </div>
+
+                    <div class="oval-wrap">
+                        <ScavengerOval />
+                    </div>
+
+                    <div class="speaker-wrap">
+                        <div class="bubble-wrap">
+                            <ChatBubble />
+                        </div>
+
+                        <div class="magnifying-glass-wrap">
+                            <img
+                                class="magnifying-glass"
+                                src={magnifyingGlass.src}
+                                alt="A smiling magnifying glass"
+                                width={magnifyingGlass.width}
+                                height={magnifyingGlass.height}
+                                loading="eager"
+                                decoding="async"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="prize-card">
+                        <TextCard label="Hella good prizes" rotation={1.5}>
+                            hella good
+                            <br />
+                            prizes
+                        </TextCard>
+                    </div>
+                </div>
+
+                <Navbar />
+            </section>
+
+            <section
+                class="event-card"
+                id="details"
+                aria-labelledby="event-heading"
+            >
+                <div class="event-intro">
+                    <h1 id="event-heading">
+                        A free all-day competitive scavenger hunt across the
+                        Fremont Neighborhood of Seattle.
+                    </h1>
+                    <p class="event-copy">
+                        Teams of up to ten will spend the day completing clues
+                        all over Fremont: solving puzzles, making absurd things,
+                        digging up neighborhood history, exploring nooks and
+                        crannies, giving back to the community, and more. Teams
+                        will have twelve hours to work on ~100 clues, after
+                        which the all-powerful Hunt Masters will award points
+                        and, if we do say so ourselves, some hella good prizes.
+                        This isn't your grandmother's scavenger hunt: think{" "}
+                        <a href="https://www.youtube.com/watch?v=8osXVhoSelM">
+                            Taskmaster
+                        </a>{" "}
+                        or the{" "}
+                        <a href="https://scavhunt.uchicago.edu/">
+                            University of Chicago Scav
+                        </a>{" "}
+                        with a twist of Fremont weird. Hunt the Universe is
+                        designed for adults, but it is suitable for all ages
+                        (more-or-less. Do you mind explaining to your kid what a
+                        polycule is?).
+                    </p>
+                    <div class="free-card">
+                        <TextCard tone="yellow" label="Free" rotation={7}>
+                            FREE
+                        </TextCard>
+                    </div>
+                </div>
+
+                <div class="event-register" id="register">
+                    <NavButton
+                        href="/register"
+                        tone="pink"
+                    >
+                        Register now!
+                    </NavButton>
+                </div>
+            </section>
+
+            <img
+                class="bridge bridge--left"
+                src={bridgeLeft.src}
+                alt=""
+                width={bridgeLeft.width}
+                height={bridgeLeft.height}
+                loading="lazy"
+                decoding="async"
+            />
+            <img
+                class="bridge bridge--right"
+                src={bridgeRight.src}
+                alt=""
+                width={bridgeRight.width}
+                height={bridgeRight.height}
+                loading="lazy"
+                decoding="async"
+            />
+
+            <div class="page-doodle page-doodle--left" aria-hidden="true">
+                ✦
+            </div>
+            <div class="page-doodle page-doodle--right" aria-hidden="true">
+                ✹
+            </div>
+        </main>
+    </body>
+</html>
+
+<style>
+    main {
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+        padding: clamp(1rem, 3vw, 2.25rem);
+        background:
+            radial-gradient(
+                circle at 17% 19%,
+                rgb(253 252 118 / 32%) 0 2px,
+                transparent 3px
+            ),
+            radial-gradient(
+                circle at 82% 28%,
+                rgb(255 255 255 / 35%) 0 2px,
+                transparent 3px
+            ),
+            linear-gradient(
+                145deg,
+                #00ed8f 0%,
+                var(--color-green) 52%,
+                #00e68c 100%
+            );
+        background-size:
+            39px 39px,
+            51px 51px,
+            auto;
+    }
+
+    .hero {
+        position: relative;
+        width: min(100%, 92rem);
+        margin-inline: auto;
+    }
+
+    .hero-art {
+        position: relative;
+        display: grid;
+        grid-template-columns:
+            minmax(17rem, 0.9fr) clamp(8rem, 13vw, 11rem)
+            minmax(21rem, 1.15fr);
+        min-height: 20rem;
+        align-items: start;
+        gap: clamp(0.5rem, 1.5vw, 1.75rem);
+    }
+
+    .title-wrap {
+        position: relative;
+        z-index: 2;
+        grid-column: 1;
+        width: min(100%, 25rem);
+    }
+
+    .rocket-path {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 1460px;
+        height: 20rem;
+        overflow: visible;
+        fill: none;
+        stroke: var(--color-blue);
+        stroke-dasharray: 10 14;
+        stroke-linecap: round;
+        stroke-width: 3;
+        opacity: 0.45;
+        pointer-events: none;
+    }
+
+    .rocket-path--tablet {
+        display: none;
+    }
+
+    .rocket-wrap {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: clamp(7rem, 13vw, 10.5rem);
+        offset-anchor: center;
+        offset-distance: 0%;
+        offset-path: path(
+            "M -120 250 C 120 315 315 275 440 165 C 535 80 525 -45 665 45 C 800 132 820 315 1010 272 C 1190 232 1310 115 1460 65"
+        );
+        offset-position: 0 0;
+        offset-rotate: auto 90deg;
+        animation: rocket-flight 11s linear infinite;
+        pointer-events: none;
+        will-change: offset-distance;
+    }
+
+    .rocket-wrap :global(.rocket) {
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(4px 6px 0 rgb(23 33 68 / 18%));
+    }
+
+    .oval-wrap {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        grid-column: 3;
+        justify-content: center;
+        padding-top: 0;
+    }
+
+    .speaker-wrap {
+        position: absolute;
+        z-index: 2;
+        top: 2.25rem;
+        left: 33.5%;
+        width: clamp(15rem, 25vw, 20.5rem);
+        aspect-ratio: 1.32 / 1;
+        pointer-events: none;
+    }
+
+    .bubble-wrap {
+        position: absolute;
+        z-index: 2;
+        top: -5px;
+        right: 0;
+        width: 72%;
+        transform: rotate(-2deg);
+    }
+
+    .magnifying-glass-wrap {
+        position: absolute;
+        z-index: 3;
+        top: 37%;
+        left: 3.5%;
+        width: 29%;
+    }
+
+    .magnifying-glass-wrap :global(.magnifying-glass) {
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(3px 5px 0 rgb(23 33 68 / 14%));
+    }
+
+    .prize-card {
+        position: absolute;
+        z-index: 3;
+        top: 1rem;
+        right: 0.5rem;
+        width: 8.5rem;
+    }
+
+    .prize-card :global(.text-card) {
+        min-height: 5.5rem;
+        padding: 0.8rem 1rem;
+        font-size: 1.7rem;
+    }
+
+    .free-card {
+        position: absolute;
+        z-index: 4;
+        top: -2rem;
+        right: -1rem;
+        width: 7.5rem;
+    }
+
+    .free-card :global(.text-card) {
+        min-height: 5rem;
+        border-width: 7px;
+        box-shadow:
+            0 0 0 8px var(--color-orange),
+            6px 10px 0 9px rgb(23 33 68 / 20%);
+    }
+
+    .event-card {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: min(calc(100% - 2rem), 78rem);
+        margin: 1.25rem auto 5rem;
+        border: 3px solid var(--color-ink);
+        border-radius: 2rem;
+        background:
+            radial-gradient(
+                circle at 72% 30%,
+                rgb(255 255 255 / 58%),
+                transparent 28%
+            ),
+            var(--color-yellow);
+        box-shadow: 6px 7px 0 rgb(23 33 68 / 18%);
+    }
+
+    .event-intro {
+        position: relative;
+        padding: clamp(1.75rem, 4vw, 3rem);
+    }
+
+    .event-intro::after {
+        position: absolute;
+        right: clamp(1.75rem, 4vw, 3rem);
+        bottom: 0;
+        left: clamp(1.75rem, 4vw, 3rem);
+        height: 3px;
+        border-radius: 99px;
+        background: var(--color-ink);
+        content: "";
+    }
+
+    h1 {
+        margin: 0;
+        color: var(--color-violet);
+        font-family: var(--font-hand);
+        font-weight: 900;
+        line-height: 1;
+        text-wrap: balance;
+    }
+
+    h1 {
+        max-width: none;
+        font-size: clamp(1.75rem, 3vw, 2.5rem);
+        line-height: 1.1;
+    }
+
+    .event-copy {
+        max-width: none;
+        margin: 1.25rem 0 0;
+        color: var(--color-pink);
+        font-family: var(--font-hand);
+        font-size: clamp(1rem, 1.3vw, 1.15rem);
+        font-weight: 800;
+        line-height: 1.5;
+    }
+
+    .event-copy a {
+        color: var(--color-blue);
+        text-decoration-thickness: 0.12em;
+        text-underline-offset: 0.14em;
+    }
+
+    .event-register {
+        padding: clamp(1.75rem, 4vw, 3rem);
+    }
+
+    .ready {
+        margin: 0 0 0.5rem;
+        color: var(--color-ink);
+        font-family: var(--font-hand);
+        font-weight: 900;
+    }
+
+    .event-register :global(.nav-button) {
+        min-height: auto;
+        padding-block: 0.7rem;
+        color: white;
+        font-size: 1.4rem;
+    }
+
+    .bridge {
+        position: fixed;
+        z-index: 100;
+        bottom: 0;
+        display: block;
+        width: clamp(8rem, 18vw, 16rem);
+        height: auto;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .bridge--left {
+        left: 0;
+    }
+
+    .bridge--right {
+        right: 0;
+    }
+
+    .page-doodle {
+        position: absolute;
+        color: var(--color-yellow);
+        font-size: clamp(5rem, 11vw, 10rem);
+        line-height: 1;
+        opacity: 0.85;
+        pointer-events: none;
+    }
+
+    .page-doodle--left {
+        bottom: 1rem;
+        left: -1rem;
+        rotate: -12deg;
+    }
+
+    .page-doodle--right {
+        right: -1rem;
+        bottom: 12rem;
+        color: var(--color-pink);
+        rotate: 9deg;
+    }
+
+    @keyframes rocket-flight {
+        from {
+            offset-distance: 0%;
+        }
+
+        to {
+            offset-distance: 100%;
+        }
+    }
+
+    @media (max-width: 64rem) {
+        .hero-art {
+            grid-template-columns:
+                minmax(14rem, 0.9fr) 7.5rem
+                minmax(18rem, 1.1fr);
+            min-height: 20rem;
+        }
+
+        .prize-card {
+            top: 10.5rem;
+        }
+
+        .rocket-wrap {
+            width: min(100%, 8.5rem);
+            offset-path: path(
+                "M -90 225 C 115 285 245 245 350 125 C 455 5 540 80 610 185 C 700 320 845 245 980 115 C 1050 48 1120 35 1180 55"
+            );
+        }
+
+        .rocket-path--desktop {
+            display: none;
+        }
+
+        .rocket-path--tablet {
+            display: initial;
+        }
+
+        .speaker-wrap {
+            top: 8.75rem;
+            left: 34.5%;
+            width: 15rem;
+        }
+    }
+
+    @media (max-width: 48rem) {
+        main {
+            padding-inline: 0.8rem;
+        }
+
+        .hero-art {
+            grid-template-columns: 1fr;
+            min-height: auto;
+            padding-bottom: 8rem;
+        }
+
+        .title-wrap {
+            grid-column: 1 / -1;
+            width: min(100%, 36rem);
+            margin-inline: auto;
+        }
+
+        .rocket-wrap {
+            position: absolute;
+            z-index: 3;
+            top: 13.25rem;
+            left: 0;
+            width: 4.25rem;
+            margin-top: 0;
+            offset-path: none;
+            offset-rotate: 0deg;
+            animation: none;
+        }
+
+        .rocket-path {
+            display: none;
+        }
+
+        .oval-wrap {
+            grid-row: 2;
+            grid-column: 1;
+            padding-inline: 0.5rem;
+        }
+
+        .speaker-wrap {
+            top: auto;
+            bottom: 0.25rem;
+            left: -0.125rem;
+            width: 12rem;
+        }
+
+        .bubble-wrap {
+            transform: rotate(-3deg);
+        }
+
+        .prize-card {
+            top: auto;
+            right: 1rem;
+            bottom: 0;
+            width: 8rem;
+        }
+
+        .prize-card :global(.text-card) {
+            min-height: 5rem;
+            font-size: 1.2rem;
+        }
+
+        .event-card {
+            grid-template-columns: 1fr;
+            width: calc(100% - 0.5rem);
+            margin-top: 1.5rem;
+        }
+
+        h1 {
+            font-size: clamp(1.65rem, 7vw, 2.2rem);
+        }
+
+        .event-intro::after {
+            right: 1.5rem;
+            left: 1.5rem;
+        }
+
+        .free-card {
+            top: -2.75rem;
+            right: -0.5rem;
+            width: 6.5rem;
+        }
+
+        .free-card :global(.text-card) {
+            min-width: 6rem;
+            min-height: 4rem;
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) and (min-width: 48.001rem) {
+        .rocket-path {
+            display: none;
+        }
+
+        .rocket-wrap {
+            top: -1.25rem;
+            left: 43%;
+            offset-path: none;
+            offset-rotate: 0deg;
+            animation: none;
+        }
+    }
+</style>

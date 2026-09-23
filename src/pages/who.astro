@@ -1,0 +1,16 @@
+---
+import { getEntry, render } from "astro:content";
+import GuidePage from "../layouts/GuidePage.astro";
+
+const who = await getEntry("pages", "who");
+
+if (!who) {
+  throw new Error("The who content entry could not be found.");
+}
+
+const { Content } = await render(who);
+---
+
+<GuidePage title={who.data.title} description={who.data.description}>
+    <Content />
+</GuidePage>

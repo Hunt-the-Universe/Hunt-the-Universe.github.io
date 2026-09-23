@@ -1,0 +1,16 @@
+---
+import { getEntry, render } from "astro:content";
+import GuidePage from "../layouts/GuidePage.astro";
+
+const tips = await getEntry("pages", "tips");
+
+if (!tips) {
+  throw new Error("The tips content entry could not be found.");
+}
+
+const { Content } = await render(tips);
+---
+
+<GuidePage title={tips.data.title} description={tips.data.description}>
+    <Content />
+</GuidePage>

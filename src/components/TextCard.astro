@@ -1,0 +1,59 @@
+---
+export type TextCardTone = "aqua" | "yellow" | "pink" | "peach";
+
+interface Props {
+  tone?: TextCardTone;
+  rotation?: number;
+  label?: string;
+}
+
+const { tone = "aqua", rotation = 0, label } = Astro.props;
+---
+
+<div
+  class={`text-card text-card--${tone}`}
+  style={`--card-rotation: ${rotation}deg`}
+  aria-label={label}
+>
+  <slot />
+</div>
+
+<style>
+  .text-card {
+    --card-fill: var(--color-aqua);
+    --card-copy: var(--color-orange);
+
+    display: grid;
+    min-width: 8rem;
+    min-height: 6.5rem;
+    place-items: center;
+    padding: 1rem 1.25rem;
+    border: 2.5px solid var(--color-ink);
+    border-radius: 0.35rem;
+    background: var(--card-fill);
+    box-shadow: 3px 4px 0 rgb(23 33 68 / 18%);
+    color: var(--card-copy);
+    font-family: var(--font-hand);
+    font-size: clamp(1.35rem, 2.8vw, 2rem);
+    font-weight: 900;
+    line-height: 1.05;
+    text-align: center;
+    text-wrap: balance;
+    rotate: var(--card-rotation);
+  }
+
+  .text-card--yellow {
+    --card-fill: var(--color-yellow);
+    --card-copy: var(--color-orange);
+  }
+
+  .text-card--pink {
+    --card-fill: var(--color-pink-soft);
+    --card-copy: var(--color-blue);
+  }
+
+  .text-card--peach {
+    --card-fill: var(--color-peach);
+    --card-copy: var(--color-blue);
+  }
+</style>

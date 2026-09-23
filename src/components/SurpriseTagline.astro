@@ -1,0 +1,70 @@
+---
+interface Props {
+  firstLine?: string;
+  secondLine?: string;
+}
+
+const {
+  firstLine = "Fremont is full of surprises.",
+  secondLine = "Let’s find them.",
+} = Astro.props;
+---
+
+<aside class="surprise-tagline" aria-label={`${firstLine} ${secondLine}`}>
+  <svg class="surprise-marks surprise-marks--left" viewBox="0 0 88 94" aria-hidden="true">
+    <path d="M18 21 60 39M27 77 64 59"></path>
+  </svg>
+  <p>
+    <span>{firstLine}</span>
+    <span>{secondLine}</span>
+  </p>
+  <svg class="surprise-marks" viewBox="0 0 88 94" aria-hidden="true">
+    <path d="M66 12 35 32M73 45 27 50M62 82 34 68"></path>
+  </svg>
+</aside>
+
+<style>
+  .surprise-tagline {
+    display: grid;
+    grid-template-columns: 5rem minmax(0, auto) 5.75rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-blue);
+  }
+
+  p {
+    display: grid;
+    margin: 0;
+    font-family: var(--font-hand);
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 900;
+    line-height: 1.05;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .surprise-marks {
+    width: 100%;
+    overflow: visible;
+    translate: 0 -0.1rem;
+  }
+
+  .surprise-marks--left {
+    width: 88%;
+    justify-self: end;
+    translate: 0 0.35rem;
+  }
+
+  .surprise-marks path {
+    fill: none;
+    stroke: var(--color-yellow);
+    stroke-linecap: round;
+    stroke-width: 8;
+  }
+
+  @media (max-width: 34rem) {
+    .surprise-tagline {
+      grid-template-columns: 3.25rem minmax(0, auto) 3.75rem;
+    }
+  }
+</style>

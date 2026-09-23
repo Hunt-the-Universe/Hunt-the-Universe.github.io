@@ -1,0 +1,55 @@
+---
+interface Props {
+  firstLine?: string;
+  secondLine?: string;
+  label?: string;
+}
+
+const {
+  firstLine = "it’ll b a",
+  secondLine = "blast!",
+  label = `${firstLine} ${secondLine}`,
+} = Astro.props;
+---
+
+<svg
+  class="chat-bubble"
+  viewBox="0 0 360 230"
+  role="img"
+  aria-label={label}
+  preserveAspectRatio="xMidYMid meet"
+>
+  <path
+    class="bubble-shape"
+    d="M192 14C108 10 46 35 29 83C17 119 31 151 62 173C51 193 35 208 15 220C47 214 73 204 95 188C124 199 159 204 198 202C282 199 337 163 340 106C343 52 286 17 192 14Z"
+  ></path>
+  <text class="bubble-copy" x="192" y="105" text-anchor="middle">
+    <tspan x="192">{firstLine}</tspan>
+    <tspan x="192" dy="58">{secondLine}</tspan>
+  </text>
+</svg>
+
+<style>
+  .chat-bubble {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    filter: drop-shadow(3px 4px 0 rgb(23 33 68 / 15%));
+  }
+
+  .bubble-shape {
+    fill: #fff;
+    stroke: var(--color-ink);
+    stroke-linejoin: round;
+    stroke-width: 4;
+  }
+
+  .bubble-copy {
+    fill: #080808;
+    font-family: var(--font-hand);
+    font-size: 51px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+  }
+</style>

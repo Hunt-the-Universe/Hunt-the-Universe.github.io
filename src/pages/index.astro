@@ -59,7 +59,16 @@ import "../styles/global.css";
                     </div>
 
                     <div class="oval-wrap">
-                        <ScavengerOval />
+                        <div class="oval-lockup">
+                            <ScavengerOval />
+                            <div class="prize-card">
+                                <TextCard label="Hella good prizes" rotation={1.5}>
+                                    hella good
+                                    <br />
+                                    prizes
+                                </TextCard>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="speaker-wrap">
@@ -78,14 +87,6 @@ import "../styles/global.css";
                                 decoding="async"
                             />
                         </div>
-                    </div>
-
-                    <div class="prize-card">
-                        <TextCard label="Hella good prizes" rotation={1.5}>
-                            hella good
-                            <br />
-                            prizes
-                        </TextCard>
                     </div>
                 </div>
 
@@ -277,6 +278,12 @@ import "../styles/global.css";
         padding-top: 0;
     }
 
+    .oval-lockup {
+        position: relative;
+        width: min(100%, 34rem);
+        padding-bottom: 5.875rem;
+    }
+
     .speaker-wrap {
         position: absolute;
         z-index: 2;
@@ -314,8 +321,8 @@ import "../styles/global.css";
     .prize-card {
         position: absolute;
         z-index: 3;
-        top: 1rem;
-        right: 0.5rem;
+        bottom: 0;
+        right: 4.5rem;
         width: 8.5rem;
     }
 
@@ -484,8 +491,8 @@ import "../styles/global.css";
             min-height: 20rem;
         }
 
-        .prize-card {
-            top: 10.5rem;
+        .oval-lockup {
+            padding-bottom: 6.625rem;
         }
 
         .rocket-wrap {
@@ -544,9 +551,16 @@ import "../styles/global.css";
         }
 
         .oval-wrap {
+            position: static;
+            z-index: auto;
             grid-row: 2;
             grid-column: 1;
             padding-inline: 0.5rem;
+        }
+
+        .oval-lockup {
+            position: static;
+            padding-bottom: 0;
         }
 
         .speaker-wrap {

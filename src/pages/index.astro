@@ -44,6 +44,11 @@ import "../styles/global.css";
 
                     <div class="title-wrap">
                         <HuntTitle />
+                        <div class="hero-date-card" style="width: 13rem">
+                            <TextCard label="October 10, 2026" rotation={-4}>
+                                <time datetime="2026-10-10">OCT 10 2026</time>
+                            </TextCard>
+                        </div>
                     </div>
 
                     <div class="rocket-wrap">
@@ -221,6 +226,23 @@ import "../styles/global.css";
         z-index: 2;
         grid-column: 1;
         width: min(100%, 25rem);
+    }
+
+    .hero-date-card {
+        position: relative;
+        z-index: 3;
+        max-width: 100%;
+        margin: -0.5rem auto 0;
+    }
+
+    .hero-date-card :global(.text-card) {
+        min-height: 5.5rem;
+        padding: 0.8rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .hero-date-card :global(time) {
+        white-space: nowrap;
     }
 
     .rocket-path {
@@ -532,6 +554,11 @@ import "../styles/global.css";
             grid-column: 1 / -1;
             width: min(100%, 36rem);
             margin-inline: auto;
+        }
+
+        .hero-date-card :global(.text-card) {
+            min-height: 4.5rem;
+            font-size: 1.2rem;
         }
 
         .rocket-wrap {

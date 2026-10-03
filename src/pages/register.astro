@@ -18,7 +18,7 @@ const registrationUrl = "https://forms.gle/dymNZLfTWroQbmDJ7";
         <div class="card-copy">
             <h1 id="form-heading">Register to Hunt!</h1> 
             
-            <p class="one-team-note">
+            <p class="team-option-note">
                 <span aria-hidden="true">★</span>
                 Register with a fully formed team!
                 <span aria-hidden="true">★</span>
@@ -28,7 +28,7 @@ const registrationUrl = "https://forms.gle/dymNZLfTWroQbmDJ7";
                 need to register once for the whole team, and you can edit 
                 your response later if your roster changes.
             </p>
-            <p class="one-team-note">
+            <p class="team-option-note">
                 <span aria-hidden="true">★</span>
                 Register to be paired up with others!
                 <span aria-hidden="true">★</span>
@@ -154,7 +154,7 @@ const registrationUrl = "https://forms.gle/dymNZLfTWroQbmDJ7";
         text-align: center;
     }
 
-    .card-copy > p:not(.one-team-note) {
+    .card-copy > p:not(.team-option-note) {
         margin: 1.5rem auto 2rem;
         font-size: clamp(1rem, 1.6vw, 1.15rem);
         line-height: 1.65;
@@ -208,7 +208,7 @@ const registrationUrl = "https://forms.gle/dymNZLfTWroQbmDJ7";
         line-height: 0;
     }
 
-    .one-team-note {
+    .team-option-note {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -222,7 +222,7 @@ const registrationUrl = "https://forms.gle/dymNZLfTWroQbmDJ7";
         text-transform: uppercase;
     }
 
-    .one-team-note span {
+    .team-option-note span {
         color: var(--color-pink);
     }
 
@@ -335,7 +335,7 @@ const registrationUrl = "https://forms.gle/dymNZLfTWroQbmDJ7";
             padding-inline: 1rem;
         }
 
-        .one-team-note {
+        .team-option-note {
             align-items: flex-start;
         }
 

@@ -7,11 +7,15 @@ description: Everything your team needs to know before, during, and after Hunt t
 
 ### Registration
 
-1. Assemble a team! Your team will need to have 5 to 10 willing members. This is a scientific number we have arrived at from years of scavenger hunt work. Trust us!
-   - Elect a Team Captain (up to you how you choose: trial by nerf combat, pad thai eating contest, nose goes…)
-   - Assemble all team members’ full names and email addresses.
-2. The Team Captain will register all members of the team at once at our REGISTRATION LINK.
-3. All members will need to agree to follow Details and Rules and sign a liability release that will be emailed to them before they can participate (this will also be available day-of at Hunt HQ if you’re a late addition).
+1. **Register with a team!**
+Your team will need to have 5 to 10 willing members. This is a scientific number we have arrived at from years of scavenger hunt work. Trust us!
+      - Elect a Team Captain (up to you how you choose: trial by nerf combat, pad thai eating contest, nose goes…)
+      - Assemble all team members’ full names and email addresses for the Team Captain to register on our registration page! 
+2. **Register as an induvidual!**
+We will pair you up with other chaotic folks!
+
+> _Note! All participants will need to agree to follow Details and Rules and sign a liability release that will be emailed to them before they can participate (this will also be available day-of at Hunt HQ if you’re a late addition)._
+
 
 ### Before the Hunt
 
